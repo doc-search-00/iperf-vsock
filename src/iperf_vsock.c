@@ -126,7 +126,8 @@ vsock_sockaddr(const char *cid_str, int port, int listen, socklen_t *len)
 		svm->svm_cid = cid;
 		svm->svm_port = port;
 		if (sibling) {
-			svm->svm_flags = VMADDR_FLAG_TO_HOST;
+			printf("sibling communciation not supported due to compilation issues\n");
+			// svm->svm_flags = VMADDR_FLAG_TO_HOST;
 		}
 
 		return (struct sockaddr *)svm;
